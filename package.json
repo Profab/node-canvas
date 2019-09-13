@@ -29,7 +29,7 @@
     "test": "mocha test/*.test.js",
     "pretest-server": "node-gyp build",
     "test-server": "node test/server.js",
-    "install": "node-pre-gyp install --fallback-to-build",
+    "install": "true || node-pre-gyp install --fallback-to-build",
     "dtslint": "dtslint types"
   },
   "binary": {
@@ -41,6 +41,7 @@
   },
   "files": [
     "binding.gyp",
+    "build/",
     "lib/",
     "src/",
     "util/",
